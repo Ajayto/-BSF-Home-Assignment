@@ -7,7 +7,8 @@ the framework is developed using below tools and technology
 4. junit
 5. maven
 
-Run test:
+Run test:if you want to run project with eclipse need follow below setps 
+
 How to import Project 
 
 1. clone project 
