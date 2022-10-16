@@ -1,5 +1,6 @@
 package step_def;
 
+import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 import core.BrowserBase;
