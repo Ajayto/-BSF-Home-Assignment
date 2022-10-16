@@ -13,5 +13,5 @@ Feature: Verify Acount and list feature
     Then Verify list page is displayed with text "<listText>"
 
     Examples: 
-      | menu_yourOrder | menu_yourAddress | menu_yourList | listText|
-      | Your Orders    | Your Addresses   | Your Lists    | Lists\nfor all your shopping needs\nSign In|
+      | menu_yourOrder | menu_yourAddress | menu_yourList | listText                                    |
+      | Your Orders    | Your Addresses   | Your Lists    | Lists\nfor all your shopping needs\nSign In |

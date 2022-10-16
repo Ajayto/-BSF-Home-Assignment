@@ -57,7 +57,7 @@ public class QAElements extends BrowserBase {
 	 */
 	public static boolean isElementPresent(WebElement element)
 	{
-			return elmDisplayed(element) && elemnetEnabled(element);	
+		return elmDisplayed(element) && elemnetEnabled(element);	
 	}
 
 	/**
@@ -99,8 +99,8 @@ public class QAElements extends BrowserBase {
 	 */
 	public static void clickElement(WebElement element){
 		try {
-		waitToClickable(element);
-		element.click();
+			waitToClickable(element);
+			element.click();
 		}
 		catch(Exception e) {
 			JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -180,11 +180,4 @@ public class QAElements extends BrowserBase {
 			System.err.println("selectCheckboxOrRadio(): " + e.getMessage());
 		}
 	}
-
-
-
-
-
-
-
 }

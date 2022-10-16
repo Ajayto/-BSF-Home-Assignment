@@ -35,5 +35,4 @@ public class ProductDetailsPage extends QAElements {
 		}
 		Thread.sleep(1000);
 	}
-
 }

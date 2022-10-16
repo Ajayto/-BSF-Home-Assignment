@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 
 /** @class: BaseClass
 @desc: class for to add generic functions
-*/
+ */
 
 public class BaseClass{
 	final static int DEFAULTWAITSECONDS = 10;
@@ -28,7 +28,6 @@ public class BaseClass{
 	public static String currentImage;
 	public static File DestFile;
 	public static String  projectName;
-	public static ResLog resLog;
 
 
 	/**
@@ -37,7 +36,7 @@ public class BaseClass{
 	@param: password - user password
 	@return: void 
 	@throws IOException
-	*/
+	 */
 	public static void readProperty() throws IOException {
 		String sConfig = System.getProperty("user.dir");
 		sConfig = sConfig + "/src/test/resources/configuration/configuration.properties";
@@ -52,7 +51,7 @@ public class BaseClass{
 	@param: 
 	@return: void 
 	@throws IOException 
-	*/
+	 */
 	public static void takeSnapShot() throws IOException{
 		DateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
 		Date date = new Date();
@@ -68,7 +67,7 @@ public class BaseClass{
 	@desc: this function used to create report directory path
 	@param: String-projectName
 	@return: String-reportPath 
-	*/
+	 */
 	public static String reportDirectory() {
 		DateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
 		Date date = new Date();

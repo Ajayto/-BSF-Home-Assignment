@@ -1,5 +1,4 @@
 package step_def;
-import java.util.HashMap;
 
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
@@ -19,7 +18,7 @@ public class ShoppingExperienceTest {
 	LandingPage landingPage;
 	@When("I navigate to menu {string}")
 	public void i_navigate_to_menu(String menu) {
-	    landingPage=PageFactory.initElements(BrowserBase.driver, LandingPage.class);
+		landingPage=PageFactory.initElements(BrowserBase.driver, LandingPage.class);
 		landingPage.clickOnMenu(menu);
 	}
 	@When("I select category as {string}")
@@ -29,8 +28,6 @@ public class ShoppingExperienceTest {
 		int categoryNumber=Integer.parseInt(category);
 		System.out.println("categoryNumber"+categoryNumber);
 		todaysDealPage.selectCatageriyByIndex(categoryNumber);
-		
-
 	}
 	@When("Select quantity as {string}")
 	public void select_quantity_as(String quantity) {
@@ -39,13 +36,14 @@ public class ShoppingExperienceTest {
 		Data.productDetails.put(Data.productEnum.PRODUCT_NAME,productDetailsPage.getProductName());
 		Data.productDetails.put(Data.productEnum.PRICE,productDetailsPage.getPrice());
 		Data.productDetails.put(Data.productEnum.SUB_TOTAL,productDetailsPage.getPrice()*Integer.parseInt(quantity));
-		
 	}
+	
 	@When("Navigate to cart")
 	public void navigate_to_cart() throws InterruptedException {
 		productDetailsPage.clickOnAddToCart();
 		landingPage.clickOnCartIcon();
 	}
+	
 	@Then("Verify correct item is added in cart")
 	public void verify_correct_item_is_added_in_cart() { 
 		CartPage cartPage= PageFactory.initElements(BrowserBase.driver,CartPage.class);
@@ -56,14 +54,13 @@ public class ShoppingExperienceTest {
 		System.out.println("Data.productOnCart"+Data.productOnCart);
 		System.out.println("Data.productDetails"+Data.productDetails);
 		Assert.assertEquals(Data.productOnCart, Data.productDetails);
-		
+
 	}
 
 	@When("I select product with index {string}")
 	public void selectProduct(String product) throws InterruptedException {
 		int productIndex=Integer.parseInt(product);
 		todaysDealPage.SelectProductByIndex(productIndex);	
-	    productDetailsPage= PageFactory.initElements(BrowserBase.driver,ProductDetailsPage.class );
+		productDetailsPage= PageFactory.initElements(BrowserBase.driver,ProductDetailsPage.class );
 	}
-
 }

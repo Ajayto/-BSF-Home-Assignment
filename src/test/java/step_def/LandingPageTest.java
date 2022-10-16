@@ -5,7 +5,6 @@ import org.openqa.selenium.support.PageFactory;
 import core.BrowserBase;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import junit.framework.Assert;
 import pageFactory.LandingPage;
 import pageFactory.SingInPage;
 import pageFactory.YourListPage;
@@ -36,6 +35,6 @@ public class LandingPageTest {
 	@Then("Verify list page is displayed with text {string}")
 	public void verify_list_page_is_displayed(String message) {
 		yourListPage=PageFactory.initElements(BrowserBase.driver, YourListPage.class);
-        org.junit.Assert.assertEquals(message,yourListPage.getTextListPage());
+		org.junit.Assert.assertEquals(message,yourListPage.getTextListPage());
 	}
 }

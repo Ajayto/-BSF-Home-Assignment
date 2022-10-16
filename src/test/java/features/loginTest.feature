@@ -1,5 +1,6 @@
 Feature: to test login feature
-@Assignment
+
+  @Assignment
   Scenario Outline: Verify that user cannot log in with valid but not registered email
     Given I am on landing page
     When I click on sing in button

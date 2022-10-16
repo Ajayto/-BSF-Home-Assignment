@@ -17,14 +17,13 @@ public class TodaysDealPage extends QAElements {
 		System.out.println("allCatageriy"+allCatageriy.size());
 		clickElement(allCatageriy.get(index-1));
 	}
-	
+
 	public void SelectProductByIndex(int productIndex) throws InterruptedException {
 		clickElement(allProduct.get(productIndex-1));
 		System.out.println(AllSubProduct.size());
 		if(AllSubProduct.size()>0) {
-			
+
 			clickElement(AllSubProduct.get(0));
 		}
 	}
-
 }

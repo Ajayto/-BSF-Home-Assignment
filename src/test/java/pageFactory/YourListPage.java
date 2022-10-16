@@ -9,7 +9,6 @@ public class YourListPage extends QAElements {
 	@FindBy(xpath = "//span[text()='Lists']/parent::div") public WebElement texListMessage;
 
 	public String getTextListPage(){
-     return getText(texListMessage);
+		return getText(texListMessage);
 	}
-
 }
